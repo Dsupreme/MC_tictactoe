@@ -26,6 +26,7 @@
             android:id="@+id/row_1_col_1"
             android:orientation="vertical"
             android:layout_weight="1"
+            android:background="@drawable/box1_style"
             android:layout_width="match_parent"
     		android:layout_height="match_parent">
     		
@@ -116,6 +117,7 @@
             android:id="@+id/row_1_col_2"
             android:layout_weight="1"
             android:orientation="vertical"
+            android:background="@drawable/box2_style"
             android:layout_width="match_parent"
     		android:layout_height="match_parent">
     		
@@ -206,6 +208,7 @@
             android:id="@+id/row_1_col_3"
             android:layout_weight="1"
             android:orientation="vertical"
+            android:background="@drawable/box3_style"
             android:layout_width="match_parent"
     		android:layout_height="match_parent">
     		
@@ -307,6 +310,7 @@
             android:id="@+id/row_2_col_1"
             android:orientation="vertical"
             android:layout_weight="1"
+            android:background="@drawable/box4_style"
             android:layout_width="match_parent"
     		android:layout_height="match_parent">
     		
@@ -396,6 +400,7 @@
         <LinearLayout
             android:id="@+id/row_2_col_2"
             android:layout_weight="1"
+            android:background="@drawable/box5_style"
             android:orientation="vertical"
             android:layout_width="match_parent"
     		android:layout_height="match_parent">
@@ -486,6 +491,7 @@
         <LinearLayout
             android:id="@+id/row_2_col_3"
             android:layout_weight="1"
+            android:background="@drawable/box6_style"
             android:orientation="vertical"
             android:layout_width="match_parent"
     		android:layout_height="match_parent">
@@ -588,6 +594,7 @@
             android:id="@+id/row_3_col_1"
             android:orientation="vertical"
             android:layout_weight="1"
+            android:background="@drawable/box7_style"
             android:layout_width="match_parent"
     		android:layout_height="match_parent">
     		
@@ -678,6 +685,7 @@
             android:id="@+id/row_3_col_2"
             android:orientation="vertical"
             android:layout_weight="1"
+            android:background="@drawable/box8_style"
             android:layout_width="match_parent"
     		android:layout_height="match_parent">
     		
@@ -768,6 +776,7 @@
             android:id="@+id/row_3_col_3"
             android:orientation="vertical"
             android:layout_weight="1"
+            android:background="@drawable/box9_style"
             android:layout_width="match_parent"
     		android:layout_height="match_parent">
     		
@@ -858,6 +867,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Player2" />
+	
+	<Button 
+	    android:id="@+id/New_game"
+	    android:layout_width="match_parent"
+	    android:layout_height="40dp"
+	    android:text="New Game"
+	    />
+	<Button 
+	    android:id="@+id/Exit_game"
+	    android:layout_width="match_parent"
+	    android:layout_height="40dp"
+	    android:text="EXIT"
+	/>
     
 <!-- All ENDS HERE -->   
 </LinearLayout>
