@@ -258,8 +258,6 @@ int drawable box8_style 0x7f02005e
 int drawable box9_style 0x7f02005f
 int drawable custom_button 0x7f020060
 int drawable ic_launcher 0x7f020061
-int id Exit_game 0x7f0600bb
-int id New_game 0x7f0600ba
 int id action_bar 0x7f060022
 int id action_bar_activity_content 0x7f06001b
 int id action_bar_container 0x7f060021
@@ -271,10 +269,11 @@ int id action_context_bar 0x7f060023
 int id action_menu_divider 0x7f06001c
 int id action_menu_presenter 0x7f06001d
 int id action_mode_close_button 0x7f06002a
-int id action_settings 0x7f0600be
+int id action_settings 0x7f0600bd
 int id activity_chooser_view_content 0x7f06002b
 int id always 0x7f060011
 int id beginning 0x7f060017
+int id blank_space 0x7f0600ba
 int id box_1_b1 0x7f060045
 int id box_1_b2 0x7f060046
 int id box_1_b3 0x7f060047
@@ -407,8 +406,8 @@ int id md__content 0x7f060002
 int id md__drawer 0x7f060004
 int id md__menu 0x7f060003
 int id middle 0x7f060018
-int id navList 0x7f0600bc
-int id navText 0x7f0600bd
+int id navList 0x7f0600bb
+int id navText 0x7f0600bc
 int id never 0x7f06000f
 int id none 0x7f060016
 int id normal 0x7f060006

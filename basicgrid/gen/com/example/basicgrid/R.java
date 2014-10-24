@@ -1188,8 +1188,6 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020061;
     }
     public static final class id {
-        public static final int Exit_game=0x7f0600bb;
-        public static final int New_game=0x7f0600ba;
         public static final int action_bar=0x7f060022;
         public static final int action_bar_activity_content=0x7f06001b;
         public static final int action_bar_container=0x7f060021;
@@ -1201,10 +1199,11 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f06001c;
         public static final int action_menu_presenter=0x7f06001d;
         public static final int action_mode_close_button=0x7f06002a;
-        public static final int action_settings=0x7f0600be;
+        public static final int action_settings=0x7f0600bd;
         public static final int activity_chooser_view_content=0x7f06002b;
         public static final int always=0x7f060011;
         public static final int beginning=0x7f060017;
+        public static final int blank_space=0x7f0600ba;
         public static final int box_1_b1=0x7f060045;
         public static final int box_1_b2=0x7f060046;
         public static final int box_1_b3=0x7f060047;
@@ -1349,8 +1348,8 @@ containing a value of this type.
          */
         public static final int md__menu=0x7f060003;
         public static final int middle=0x7f060018;
-        public static final int navList=0x7f0600bc;
-        public static final int navText=0x7f0600bd;
+        public static final int navList=0x7f0600bb;
+        public static final int navText=0x7f0600bc;
         public static final int never=0x7f06000f;
         public static final int none=0x7f060016;
         public static final int normal=0x7f060006;

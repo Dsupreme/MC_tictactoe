@@ -5,15 +5,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.simonvt.menudrawer.MenuDrawer;
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class BaseActivity extends Activity {
+public class BaseActivity extends ActionBarActivity {
 	public MenuDrawer mMenuDrawer;	
 	ListView lv;
 	SlidingNavAdapter adapter;
@@ -39,10 +39,10 @@ public class BaseActivity extends Activity {
 	}
 	void setUpSlidingItems(){
 		items = new ArrayList<SlidingGetSet>();
-		items.add(new SlidingGetSet("One"));
+		items.add(new SlidingGetSet("New Game"));
 		items.add(new SlidingGetSet("Two"));
-		items.add(new SlidingGetSet("Three"));
-		items.add(new SlidingGetSet("Four"));
+		items.add(new SlidingGetSet("Settings"));
+		items.add(new SlidingGetSet("Exit"));
 		adapter=new SlidingNavAdapter(items,this);
 		lv.setAdapter(adapter);
 	}
@@ -82,6 +82,7 @@ public class BaseActivity extends Activity {
 					long arg3) {
 				// TODO Auto-generated method stub
 				menuClickAction(pos);
+				mMenuDrawer.closeMenu();
 			}
 		 });
 	}
