@@ -1199,7 +1199,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f06001c;
         public static final int action_menu_presenter=0x7f06001d;
         public static final int action_mode_close_button=0x7f06002a;
-        public static final int action_settings=0x7f0600bd;
+        public static final int action_settings=0x7f0600bf;
         public static final int activity_chooser_view_content=0x7f06002b;
         public static final int always=0x7f060011;
         public static final int beginning=0x7f060017;
@@ -1314,6 +1314,7 @@ containing a value of this type.
         public static final int box_9_row_3=0x7f0600b6;
         public static final int checkbox=0x7f060033;
         public static final int collapseActionView=0x7f060013;
+        public static final int content=0x7f0600bc;
         public static final int default_activity_button=0x7f06002e;
         public static final int dialog=0x7f060014;
         public static final int disableHome=0x7f06000e;
@@ -1348,11 +1349,12 @@ containing a value of this type.
          */
         public static final int md__menu=0x7f060003;
         public static final int middle=0x7f060018;
-        public static final int navList=0x7f0600bb;
-        public static final int navText=0x7f0600bc;
+        public static final int navList=0x7f0600bd;
+        public static final int navText=0x7f0600be;
         public static final int never=0x7f06000f;
         public static final int none=0x7f060016;
         public static final int normal=0x7f060006;
+        public static final int pager=0x7f0600bb;
         public static final int progress_circular=0x7f06001e;
         public static final int progress_horizontal=0x7f06001f;
         public static final int radio=0x7f060035;
@@ -1442,12 +1444,15 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030016;
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_main=0x7f030018;
-        public static final int sliding_layout=0x7f030019;
-        public static final int sliding_nav_items=0x7f03001a;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
+        public static final int activity_screen_slide=0x7f030019;
+        public static final int fragment_screen_slide_page=0x7f03001a;
+        public static final int sliding_layout=0x7f03001b;
+        public static final int sliding_nav_items=0x7f03001c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
+        public static final int tutorial=0x7f0c0001;
     }
     public static final class string {
         public static final int Player1=0x7f0b0010;
@@ -1495,6 +1500,8 @@ containing a value of this type.
         public static final int action_settings=0x7f0b000f;
         public static final int app_name=0x7f0b000d;
         public static final int hello_world=0x7f0b000e;
+        public static final int title_activity_tutorial=0x7f0b0012;
+        public static final int tutorial=0x7f0b0013;
     }
     public static final class style {
         /** 

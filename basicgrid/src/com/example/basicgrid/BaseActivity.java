@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.simonvt.menudrawer.MenuDrawer;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -40,7 +41,7 @@ public class BaseActivity extends ActionBarActivity {
 	void setUpSlidingItems(){
 		items = new ArrayList<SlidingGetSet>();
 		items.add(new SlidingGetSet("New Game"));
-		items.add(new SlidingGetSet("Two"));
+		items.add(new SlidingGetSet("Tutorial"));
 		items.add(new SlidingGetSet("Settings"));
 		items.add(new SlidingGetSet("Exit"));
 		adapter=new SlidingNavAdapter(items,this);
@@ -97,6 +98,8 @@ public class BaseActivity extends ActionBarActivity {
 			break;
 		case TWO:
 			Toast.makeText(this, "Two", Toast.LENGTH_SHORT).show();
+			Intent tutorial = new Intent(this, ScreenSlideActivity.class);
+			startActivity(tutorial);
 			break;
 		case THREE:
 			Toast.makeText(this, "Three", Toast.LENGTH_SHORT).show();

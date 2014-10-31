@@ -1,6 +1,5 @@
 package com.example.basicgrid;
 
-
 import java.util.List;
 
 import android.content.Context;
@@ -9,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
 
 public class SlidingNavAdapter extends BaseAdapter {
 	List<SlidingGetSet> data;

@@ -3,7 +3,7 @@ package com.example.basicgrid;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class MainActivity extends BaseActivity{
+public class MainActivity extends BaseActivity{	
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

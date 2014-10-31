@@ -269,7 +269,7 @@ int id action_context_bar 0x7f060023
 int id action_menu_divider 0x7f06001c
 int id action_menu_presenter 0x7f06001d
 int id action_mode_close_button 0x7f06002a
-int id action_settings 0x7f0600bd
+int id action_settings 0x7f0600bf
 int id activity_chooser_view_content 0x7f06002b
 int id always 0x7f060011
 int id beginning 0x7f060017
@@ -384,6 +384,7 @@ int id box_9_row_2 0x7f0600b2
 int id box_9_row_3 0x7f0600b6
 int id checkbox 0x7f060033
 int id collapseActionView 0x7f060013
+int id content 0x7f0600bc
 int id default_activity_button 0x7f06002e
 int id dialog 0x7f060014
 int id disableHome 0x7f06000e
@@ -406,11 +407,12 @@ int id md__content 0x7f060002
 int id md__drawer 0x7f060004
 int id md__menu 0x7f060003
 int id middle 0x7f060018
-int id navList 0x7f0600bb
-int id navText 0x7f0600bc
+int id navList 0x7f0600bd
+int id navText 0x7f0600be
 int id never 0x7f06000f
 int id none 0x7f060016
 int id normal 0x7f060006
+int id pager 0x7f0600bb
 int id progress_circular 0x7f06001e
 int id progress_horizontal 0x7f06001f
 int id radio 0x7f060035
@@ -474,10 +476,13 @@ int layout abc_search_dropdown_item_icons_2line 0x7f030015
 int layout abc_search_view 0x7f030016
 int layout abc_simple_decor 0x7f030017
 int layout activity_main 0x7f030018
-int layout sliding_layout 0x7f030019
-int layout sliding_nav_items 0x7f03001a
-int layout support_simple_spinner_dropdown_item 0x7f03001b
+int layout activity_screen_slide 0x7f030019
+int layout fragment_screen_slide_page 0x7f03001a
+int layout sliding_layout 0x7f03001b
+int layout sliding_nav_items 0x7f03001c
+int layout support_simple_spinner_dropdown_item 0x7f03001d
 int menu main 0x7f0c0000
+int menu tutorial 0x7f0c0001
 int string Player1 0x7f0b0010
 int string Player2 0x7f0b0011
 int string abc_action_bar_home_description 0x7f0b0001
@@ -496,6 +501,8 @@ int string abc_shareactionprovider_share_with_application 0x7f0b000b
 int string action_settings 0x7f0b000f
 int string app_name 0x7f0b000d
 int string hello_world 0x7f0b000e
+int string title_activity_tutorial 0x7f0b0012
+int string tutorial 0x7f0b0013
 int style AppBaseTheme 0x7f07008d
 int style AppTheme 0x7f07008e
 int style TextAppearance_AppCompat_Base_CompactMenu_Dialog 0x7f070065
