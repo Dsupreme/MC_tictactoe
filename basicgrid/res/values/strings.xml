@@ -8,5 +8,6 @@
     <string name="Player2">Player 2</string>
     <string name="title_activity_tutorial">Game Tutorial</string>
     <string name="tutorial">Tutorial Heading</string>
+    <string name="title_activity_display_message">DisplayMessageActivity</string>
 
 </resources>

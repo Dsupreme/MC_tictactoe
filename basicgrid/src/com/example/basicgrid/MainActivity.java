@@ -4,6 +4,9 @@ package com.example.basicgrid;
 //import com.example.NaughtsAndCrosses.R;
 //import com.example.NaughtsAndCrosses.MainActivity.PlayOnClick;
 
+import java.util.HashMap;
+
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,10 +19,17 @@ import android.widget.TextView;
 
 public class MainActivity extends BaseActivity{	
 
-	
+    public final static String EXTRA_MESSAGE = "com.example.basicgrid.MESSAGE";
 	private boolean noughtsTurn = false; // Who's turn is it? false=X true=O
-	private char board[][] = new char[3][3];
-	private boolean boxstate[][] = new boolean [3][3];
+	//private char board[][] = new char[3][3];
+	private char big_box[][]=new char[3][3];
+	private char array_boxes[][][]=new char[9][3][3];
+//private String boxstate[][] = new String [3][3];
+	private String[] boxstate=new String[10];
+	
+	HashMap<String,Integer> map_boxes = new HashMap<String,Integer>();
+	HashMap<Integer,String> inverse_map_boxes = new HashMap<Integer,String>();
+
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -27,25 +37,49 @@ public class MainActivity extends BaseActivity{
         setContentView(R.layout.activity_main);
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+        map_boxes.put("11",1);
+        map_boxes.put("12",2);
+        map_boxes.put("13",3);
+        map_boxes.put("21",4);
+        map_boxes.put("22",5);
+        map_boxes.put("23",6);
+        map_boxes.put("31",7);
+        map_boxes.put("32",8);
+        map_boxes.put("33",9);
+        inverse_map_boxes.put(1,"11");
+        inverse_map_boxes.put(2,"12");
+        inverse_map_boxes.put(3,"13");
+        inverse_map_boxes.put(4,"21");
+        inverse_map_boxes.put(5,"22");
+        inverse_map_boxes.put(6,"23");
+        inverse_map_boxes.put(7,"31");
+        inverse_map_boxes.put(8,"32");
+        inverse_map_boxes.put(9,"33");
+        
         setboxstate();
         setupOnClickListeners();
         resetButtons();
+        
     }
     private void setboxstate()
     {
-    	for(int i=0;i<3;++i)
+    	for(int i=0;i<10;++i)
     	{
-    		for(int j=0;j<3;++j)
+    		/*for(int j=0;j<3;j++)
     		{
-    			boxstate[i][j]=false;
-    		}
+    			boxstate[i][j]="";
+    		}*/
+    		boxstate[i]="";
     	}
     }
     public void newGame(View view) {
 		noughtsTurn = false;
-		board = new char[9][9];
+		//board = new char[9][9];
+		big_box=new char[3][3];
+		array_boxes=new char[9][3][3];
 		resetButtons();
 	}
+    
     private void resetButtons() {
 		TableLayout T1 = (TableLayout) findViewById(R.id.box_11);
 		for (int y = 0; y < T1.getChildCount(); y++) {
@@ -176,12 +210,12 @@ public class MainActivity extends BaseActivity{
 	}
     
     
-    private boolean checkWin() {
+    private boolean checkWin(char[][] box) {
 
 		char winner = '\0';
-		if (checkWinner(board, 3, 'X')) {
+		if (checkWinner(box, 3, 'X')) {
 			winner = 'X';
-		} else if (checkWinner(board, 3, 'O')) {
+		} else if (checkWinner(box, 3, 'O')) {
 			winner = 'O';
 		}
 
@@ -268,6 +302,7 @@ public class MainActivity extends BaseActivity{
 			}
 		}
 	}
+	
 	
 	private void partialdisableButtons(String enablebox) {
 		TableLayout T1 = (TableLayout) findViewById(R.id.box_11);
@@ -397,6 +432,117 @@ public class MainActivity extends BaseActivity{
 		}
 	}
 	
+	private void enableButtons() {
+		TableLayout T1 = (TableLayout) findViewById(R.id.box_11);
+		for (int y = 0; y < T1.getChildCount(); y++) {
+			if (T1.getChildAt(y) instanceof TableRow) {
+				TableRow R = (TableRow) T1.getChildAt(y);
+				for (int x = 0; x < R.getChildCount(); x++) {
+					if (R.getChildAt(x) instanceof Button) {
+						Button B = (Button) R.getChildAt(x);
+						B.setEnabled(true);
+					}
+				}
+			}
+		}
+		TableLayout T2 = (TableLayout) findViewById(R.id.box_12);
+		for (int y = 0; y < T2.getChildCount(); y++) {
+			if (T2.getChildAt(y) instanceof TableRow) {
+				TableRow R = (TableRow) T2.getChildAt(y);
+				for (int x = 0; x < R.getChildCount(); x++) {
+					if (R.getChildAt(x) instanceof Button) {
+						Button B = (Button) R.getChildAt(x);
+						B.setEnabled(true);
+					}
+				}
+			}
+		}
+		TableLayout T3 = (TableLayout) findViewById(R.id.box_13);
+		for (int y = 0; y < T3.getChildCount(); y++) {
+			if (T3.getChildAt(y) instanceof TableRow) {
+				TableRow R = (TableRow) T3.getChildAt(y);
+				for (int x = 0; x < R.getChildCount(); x++) {
+					if (R.getChildAt(x) instanceof Button) {
+						Button B = (Button) R.getChildAt(x);
+						B.setEnabled(true);
+					}
+				}
+			}
+		}
+		TableLayout T4 = (TableLayout) findViewById(R.id.box_21);
+		for (int y = 0; y < T4.getChildCount(); y++) {
+			if (T4.getChildAt(y) instanceof TableRow) {
+				TableRow R = (TableRow) T4.getChildAt(y);
+				for (int x = 0; x < R.getChildCount(); x++) {
+					if (R.getChildAt(x) instanceof Button) {
+						Button B = (Button) R.getChildAt(x);
+						B.setEnabled(true);
+					}
+				}
+			}
+		}
+		TableLayout T5 = (TableLayout) findViewById(R.id.box_22);
+		for (int y = 0; y < T5.getChildCount(); y++) {
+			if (T5.getChildAt(y) instanceof TableRow) {
+				TableRow R = (TableRow) T5.getChildAt(y);
+				for (int x = 0; x < R.getChildCount(); x++) {
+					if (R.getChildAt(x) instanceof Button) {
+						Button B = (Button) R.getChildAt(x);
+						B.setEnabled(true);
+					}
+				}
+			}
+		}
+		TableLayout T6 = (TableLayout) findViewById(R.id.box_23);
+		for (int y = 0; y < T6.getChildCount(); y++) {
+			if (T6.getChildAt(y) instanceof TableRow) {
+				TableRow R = (TableRow) T6.getChildAt(y);
+				for (int x = 0; x < R.getChildCount(); x++) {
+					if (R.getChildAt(x) instanceof Button) {
+						Button B = (Button) R.getChildAt(x);
+						B.setEnabled(true);
+					}
+				}
+			}
+		}
+		TableLayout T7 = (TableLayout) findViewById(R.id.box_31);
+		for (int y = 0; y < T7.getChildCount(); y++) {
+			if (T7.getChildAt(y) instanceof TableRow) {
+				TableRow R = (TableRow) T7.getChildAt(y);
+				for (int x = 0; x < R.getChildCount(); x++) {
+					if (R.getChildAt(x) instanceof Button) {
+						Button B = (Button) R.getChildAt(x);
+						B.setEnabled(true);
+					}
+				}
+			}
+		}
+		TableLayout T8 = (TableLayout) findViewById(R.id.box_32);
+		for (int y = 0; y < T8.getChildCount(); y++) {
+			if (T8.getChildAt(y) instanceof TableRow) {
+				TableRow R = (TableRow) T8.getChildAt(y);
+				for (int x = 0; x < R.getChildCount(); x++) {
+					if (R.getChildAt(x) instanceof Button) {
+						Button B = (Button) R.getChildAt(x);
+						B.setEnabled(true);
+					}
+				}
+			}
+		}
+		TableLayout T9 = (TableLayout) findViewById(R.id.box_33);
+		for (int y = 0; y < T9.getChildCount(); y++) {
+			if (T9.getChildAt(y) instanceof TableRow) {
+				TableRow R = (TableRow) T9.getChildAt(y);
+				for (int x = 0; x < R.getChildCount(); x++) {
+					if (R.getChildAt(x) instanceof Button) {
+						Button B = (Button) R.getChildAt(x);
+						B.setEnabled(true);
+					}
+				}
+			}
+		}
+	}
+	
 	private void setupOnClickListeners() {
 		TableLayout T1 = (TableLayout) findViewById(R.id.box_11);
 		for (int y = 0; y < T1.getChildCount(); y++) {
@@ -404,7 +550,8 @@ public class MainActivity extends BaseActivity{
 				TableRow R = (TableRow) T1.getChildAt(y);
 				for (int x = 0; x < R.getChildCount(); x++) {
 					View V = R.getChildAt(x); // In our case this will be each button on the grid
-					V.setOnClickListener(new PlayOnClick(x, y));
+				//V.setOnClickListener(new PlayOnClick(x, y));
+					V.setOnClickListener(new PlayOnClick(0,x,y));
 				}
 			}
 		}
@@ -414,7 +561,8 @@ public class MainActivity extends BaseActivity{
 				TableRow R = (TableRow) T2.getChildAt(y);
 				for (int x = 0; x < R.getChildCount(); x++) {
 					View V = R.getChildAt(x); // In our case this will be each button on the grid
-					V.setOnClickListener(new PlayOnClick(x, y));
+					//V.setOnClickListener(new PlayOnClick(x, y));
+					V.setOnClickListener(new PlayOnClick(1,x,y));
 				}
 			}
 		}
@@ -424,7 +572,8 @@ public class MainActivity extends BaseActivity{
 				TableRow R = (TableRow) T3.getChildAt(y);
 				for (int x = 0; x < R.getChildCount(); x++) {
 					View V = R.getChildAt(x); // In our case this will be each button on the grid
-					V.setOnClickListener(new PlayOnClick(x, y));
+					//V.setOnClickListener(new PlayOnClick(x, y));
+					V.setOnClickListener(new PlayOnClick(2,x,y));
 				}
 			}
 		}
@@ -434,7 +583,8 @@ public class MainActivity extends BaseActivity{
 				TableRow R = (TableRow) T4.getChildAt(y);
 				for (int x = 0; x < R.getChildCount(); x++) {
 					View V = R.getChildAt(x); // In our case this will be each button on the grid
-					V.setOnClickListener(new PlayOnClick(x, y));
+					//V.setOnClickListener(new PlayOnClick(x, y));
+					V.setOnClickListener(new PlayOnClick(3,x,y));
 				}
 			}
 		}
@@ -444,7 +594,8 @@ public class MainActivity extends BaseActivity{
 				TableRow R = (TableRow) T5.getChildAt(y);
 				for (int x = 0; x < R.getChildCount(); x++) {
 					View V = R.getChildAt(x); // In our case this will be each button on the grid
-					V.setOnClickListener(new PlayOnClick(x, y));
+					//V.setOnClickListener(new PlayOnClick(x, y));
+					V.setOnClickListener(new PlayOnClick(4,x,y));
 				}
 			}
 		}
@@ -454,7 +605,8 @@ public class MainActivity extends BaseActivity{
 				TableRow R = (TableRow) T6.getChildAt(y);
 				for (int x = 0; x < R.getChildCount(); x++) {
 					View V = R.getChildAt(x); // In our case this will be each button on the grid
-					V.setOnClickListener(new PlayOnClick(x, y));
+					//V.setOnClickListener(new PlayOnClick(x, y));
+					V.setOnClickListener(new PlayOnClick(5,x,y));
 				}
 			}
 		}
@@ -464,7 +616,8 @@ public class MainActivity extends BaseActivity{
 				TableRow R = (TableRow) T7.getChildAt(y);
 				for (int x = 0; x < R.getChildCount(); x++) {
 					View V = R.getChildAt(x); // In our case this will be each button on the grid
-					V.setOnClickListener(new PlayOnClick(x, y));
+					//V.setOnClickListener(new PlayOnClick(x, y));
+					V.setOnClickListener(new PlayOnClick(6,x,y));
 				}
 			}
 		}
@@ -474,7 +627,8 @@ public class MainActivity extends BaseActivity{
 				TableRow R = (TableRow) T8.getChildAt(y);
 				for (int x = 0; x < R.getChildCount(); x++) {
 					View V = R.getChildAt(x); // In our case this will be each button on the grid
-					V.setOnClickListener(new PlayOnClick(x, y));
+					//V.setOnClickListener(new PlayOnClick(x, y));
+					V.setOnClickListener(new PlayOnClick(7,x,y));
 				}
 			}
 		}
@@ -484,7 +638,8 @@ public class MainActivity extends BaseActivity{
 				TableRow R = (TableRow) T9.getChildAt(y);
 				for (int x = 0; x < R.getChildCount(); x++) {
 					View V = R.getChildAt(x); // In our case this will be each button on the grid
-					V.setOnClickListener(new PlayOnClick(x, y));
+					//V.setOnClickListener(new PlayOnClick(x, y));
+					V.setOnClickListener(new PlayOnClick(8,x,y));
 				}
 			}
 		}
@@ -496,32 +651,74 @@ public class MainActivity extends BaseActivity{
 
 		private int x = 0;
 		private int y = 0;
+		private int z=0;
 
 		public PlayOnClick(int x, int y) {
 			this.x = x;
 			this.y = y;
 		}
+		public PlayOnClick(int x, int y,int z) {
+			this.x = x;
+			this.y = y;
+			this.z=z;
+		}
+		
 
 		@Override
 		public void onClick(View view) {
 			if (view instanceof Button) {
 				Button B = (Button) view;
-				board[x][y] = noughtsTurn ? 'O' : 'X';
-				B.setText(noughtsTurn ? "O" : "X");
+				array_boxes[x][y][z] = noughtsTurn ? 'O' : 'X';
+				if(B.getText().equals(""))
+				{
+					B.setText(noughtsTurn ? "O" : "X");
+				
 				B.setEnabled(false);
 				noughtsTurn = !noughtsTurn;
-				int butid=B.getId();
-				//B.getid
+				
 				String temp= B.getResources().getResourceEntryName(B.getId());
 				String gotoboxid = ""+ temp.charAt(3)+temp.charAt(5);
-				//System.out.println(gotoboxid);
 				TextView T = (TextView) findViewById(R.id.winner);
 				T.setText(gotoboxid);
-				partialdisableButtons(gotoboxid);
-				// check if anyone has won
-				if (checkWin()) {
+				
+				// check if anyone has won that box.
+				
+					if (checkWin(array_boxes[Integer.parseInt(""+temp.charAt(1))-1])&& boxstate[Integer.parseInt(""+temp.charAt(1))]=="") 
+					{
+				    String big_box_id=inverse_map_boxes.get(Integer.parseInt(""+temp.charAt(1)));
+				    big_box[Integer.parseInt(""+big_box_id.charAt(0))-1][Integer.parseInt(""+big_box_id.charAt(1))-1]=B.getText().charAt(0);
 					
-					disableButtons();
+					boxstate[Integer.parseInt(""+temp.charAt(1))]=B.getText().toString();
+					Log.d("boxstate", boxstate[Integer.parseInt(""+temp.charAt(1))]);
+					
+					String t="";
+					for(int i=0;i<10;++i)
+					{
+						t=t + " "+boxstate[i];
+					}
+					TextView T1 = (TextView) findViewById(R.id.tv1);
+					T1.setText(t);
+				    if(checkWin(big_box))
+				    {
+				       T1.setText(B.getText()+"   WONNNNNNN");
+				       Intent intent = new Intent(getApplicationContext(), DisplayMessageActivity.class);
+				       String message = B.getText()+ " WON";
+				       intent.putExtra(EXTRA_MESSAGE, message);
+				       startActivity(intent);
+				    }
+				}
+				
+				//Check if destination is already won or not.
+				if(boxstate[map_boxes.get(gotoboxid)]=="")
+				{
+					partialdisableButtons(gotoboxid);
+				}
+				
+				
+				else{
+					enableButtons();
+				}
+				//Go to relavant box.
 				}
 			}
 		}

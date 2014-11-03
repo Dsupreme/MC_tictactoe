@@ -30,6 +30,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.gridtest.MainActivity" />
         </activity>
+        <activity
+            android:name=".DisplayMessageActivity"
+            android:label="@string/title_activity_display_message" >
+        </activity>
     </application>
 
 </manifest>
