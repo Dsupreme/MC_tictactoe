@@ -1186,6 +1186,7 @@ containing a value of this type.
         public static final int box9_style=0x7f02005f;
         public static final int custom_button=0x7f020060;
         public static final int ic_launcher=0x7f020061;
+        public static final int logo=0x7f020062;
     }
     public static final class id {
         public static final int action_bar=0x7f060022;
@@ -1199,7 +1200,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f06001c;
         public static final int action_menu_presenter=0x7f06001d;
         public static final int action_mode_close_button=0x7f06002a;
-        public static final int action_settings=0x7f06011b;
+        public static final int action_settings=0x7f06011c;
         public static final int activity_chooser_view_content=0x7f06002b;
         public static final int always=0x7f060011;
         public static final int b1r1c1=0x7f060045;
@@ -1418,6 +1419,7 @@ containing a value of this type.
         public static final int icon=0x7f060030;
         public static final int ifRoom=0x7f060010;
         public static final int image=0x7f06002d;
+        public static final int imgLogo=0x7f06011b;
         public static final int listMode=0x7f060007;
         public static final int list_item=0x7f06002f;
         /**  Used with View#setTag(int) to specify a position for the active view. 
@@ -1541,7 +1543,8 @@ containing a value of this type.
         public static final int fragment_screen_slide_page=0x7f03001b;
         public static final int sliding_layout=0x7f03001c;
         public static final int sliding_nav_items=0x7f03001d;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
+        public static final int spash_screen=0x7f03001e;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001f;
     }
     public static final class menu {
         public static final int display_message=0x7f0c0000;

@@ -258,6 +258,7 @@ int drawable box8_style 0x7f02005e
 int drawable box9_style 0x7f02005f
 int drawable custom_button 0x7f020060
 int drawable ic_launcher 0x7f020061
+int drawable logo 0x7f020062
 int id action_bar 0x7f060022
 int id action_bar_activity_content 0x7f06001b
 int id action_bar_container 0x7f060021
@@ -269,7 +270,7 @@ int id action_context_bar 0x7f060023
 int id action_menu_divider 0x7f06001c
 int id action_menu_presenter 0x7f06001d
 int id action_mode_close_button 0x7f06002a
-int id action_settings 0x7f06011b
+int id action_settings 0x7f06011c
 int id activity_chooser_view_content 0x7f06002b
 int id always 0x7f060011
 int id b1r1c1 0x7f060045
@@ -488,6 +489,7 @@ int id homeAsUp 0x7f06000b
 int id icon 0x7f060030
 int id ifRoom 0x7f060010
 int id image 0x7f06002d
+int id imgLogo 0x7f06011b
 int id listMode 0x7f060007
 int id list_item 0x7f06002f
 int id mdActiveViewPosition 0x7f060005
@@ -573,7 +575,8 @@ int layout activity_screen_slide 0x7f03001a
 int layout fragment_screen_slide_page 0x7f03001b
 int layout sliding_layout 0x7f03001c
 int layout sliding_nav_items 0x7f03001d
-int layout support_simple_spinner_dropdown_item 0x7f03001e
+int layout spash_screen 0x7f03001e
+int layout support_simple_spinner_dropdown_item 0x7f03001f
 int menu display_message 0x7f0c0000
 int menu main 0x7f0c0001
 int menu tutorial 0x7f0c0002
