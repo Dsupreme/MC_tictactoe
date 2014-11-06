@@ -9,5 +9,6 @@
     <string name="title_activity_tutorial">Game Tutorial</string>
     <string name="tutorial">Tutorial Heading</string>
     <string name="title_activity_display_message">DisplayMessageActivity</string>
+    <string name="heading">Ultimate<br /> TIC TAC TOE</string>
 
 </resources>

@@ -7,7 +7,6 @@ package com.example.basicgrid;
 import java.util.HashMap;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
