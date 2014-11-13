@@ -8,9 +8,12 @@ import java.util.HashMap;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -58,6 +61,7 @@ public class MainActivity extends BaseActivity{
         setboxstate();
         setupOnClickListeners();
         resetButtons();
+        playerBarAnimate();
         
     }
     private void setboxstate()
@@ -674,6 +678,7 @@ public class MainActivity extends BaseActivity{
 				
 				B.setEnabled(false);
 				noughtsTurn = !noughtsTurn;
+				playerBarAnimate();		
 				
 				String temp= B.getResources().getResourceEntryName(B.getId());
 				String gotoboxid = ""+ temp.charAt(3)+temp.charAt(5);
@@ -723,7 +728,29 @@ public class MainActivity extends BaseActivity{
 		}
 	}
     
-    
+    public void playerBarAnimate() {
+		// TODO Auto-generated method stub
+		TextView player, player_not;
+		DisplayMetrics display = getBaseContext().getResources().getDisplayMetrics();
+        int width = display.widthPixels;
+        int height = display.heightPixels;
+        
+		if(!noughtsTurn){
+			player = (TextView) findViewById(R.id.player1);
+			player_not = (TextView) findViewById(R.id.player2);
+		}
+		else{
+			player = (TextView) findViewById(R.id.player2);
+			player_not = (TextView) findViewById(R.id.player1);
+		}
+		Animation slide_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.abc_fade_in);
+		Animation slide_out = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.abc_fade_in);
+		player.startAnimation(slide_in);
+		player_not.startAnimation(slide_out);
+		player.setWidth((int) (width*0.6));
+		player_not.setWidth((int) (width*0.35));		
+	}
+
     
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

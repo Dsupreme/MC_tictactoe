@@ -6,11 +6,36 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/wallpaper5"
     tools:context="com.example.basicgrid.DisplayMessageActivity" >
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/declareWinner"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="You Won " />
+        android:layout_above="@+id/rematch"
+        android:layout_marginBottom="20dp"
+        android:textColor="#FFF"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/rematch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/button_states_peach"
+        android:text="@string/goback"
+        android:layout_marginBottom="20dp"
+        android:textColor="#FFF"/>
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rematch"
+        android:background="@drawable/button_states_yellow"
+        android:gravity="center"
+        android:text="@string/exit"
+        android:textColor="#FFF"/>
 
 </RelativeLayout>

@@ -30,15 +30,12 @@
         </activity>
         <activity
             android:name=".ScreenSlideActivity"
-            android:label="@string/title_activity_tutorial"
-            android:parentActivityName=".MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.gridtest.MainActivity" />
+            android:label="@string/title_activity_tutorial">
         </activity>
         <activity
             android:name=".DisplayMessageActivity"
-            android:label="@string/title_activity_display_message" >
+            android:label="@string/title_activity_display_message"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Main_menu"

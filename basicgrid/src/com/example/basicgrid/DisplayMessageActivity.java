@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class DisplayMessageActivity extends ActionBarActivity {
@@ -15,12 +18,31 @@ public class DisplayMessageActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_display_message);
 		Intent intent = getIntent();
 		String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-		TextView textView = new TextView(this);
-	    textView.setTextSize(40);
-	    textView.setText(message);
+		TextView t = (TextView)findViewById(R.id.declareWinner);
+		t.setText(message);
+		t.setTextSize(40);
 
-	    // Set the text view as the activity layout
-	    setContentView(textView);
+		Button rematch = (Button) findViewById(R.id.rematch);
+		rematch.setOnClickListener(new  OnClickListener(){
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(getBaseContext(),MainActivity.class);
+				i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(i);
+			}
+		});
+		
+		Button exit = (Button) findViewById(R.id.exit);
+		exit.setOnClickListener(new  OnClickListener(){
+		
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(getBaseContext(), Main_menu.class);
+				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(intent);
+			}});
 	}
 
 	@Override
