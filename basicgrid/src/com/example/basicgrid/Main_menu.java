@@ -39,6 +39,18 @@ public class Main_menu extends Activity {
 			}
 		});
 		
+		Button settings = (Button)findViewById(R.id.settings);
+		settings.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent gotosettings = new Intent(Main_menu.this, SettingsActivity.class);
+                startActivity(gotosettings);
+				
+			}
+		});
+		
 		Button exitgame = (Button)findViewById(R.id.exit);
 		exitgame.setOnClickListener(new View.OnClickListener() {
 			

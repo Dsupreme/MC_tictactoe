@@ -41,6 +41,10 @@
             android:name=".Main_menu"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>
