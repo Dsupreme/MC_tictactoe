@@ -5,16 +5,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.simonvt.menudrawer.MenuDrawer;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class BaseActivity extends ActionBarActivity {
+public class BaseActivity extends Activity {
 	public MenuDrawer mMenuDrawer;	
 	ListView lv;
 	SlidingNavAdapter adapter;

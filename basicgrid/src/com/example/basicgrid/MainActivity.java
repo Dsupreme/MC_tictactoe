@@ -7,6 +7,7 @@ package com.example.basicgrid;
 import java.util.HashMap;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -37,8 +38,7 @@ public class MainActivity extends BaseActivity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+
         map_boxes.put("11",1);
         map_boxes.put("12",2);
         map_boxes.put("13",3);
@@ -428,7 +428,8 @@ public class MainActivity extends BaseActivity{
 				for (int x = 0; x < R.getChildCount(); x++) {
 					if (R.getChildAt(x) instanceof Button) {
 						Button B = (Button) R.getChildAt(x);
-						B.setEnabled(true);
+						if(B.getText().equals(""))
+							B.setEnabled(true);
 					}
 				}
 			}
@@ -443,7 +444,8 @@ public class MainActivity extends BaseActivity{
 				for (int x = 0; x < R.getChildCount(); x++) {
 					if (R.getChildAt(x) instanceof Button) {
 						Button B = (Button) R.getChildAt(x);
-						B.setEnabled(true);
+						if(B.getText().equals(""))
+							B.setEnabled(true);
 					}
 				}
 			}
@@ -455,7 +457,8 @@ public class MainActivity extends BaseActivity{
 				for (int x = 0; x < R.getChildCount(); x++) {
 					if (R.getChildAt(x) instanceof Button) {
 						Button B = (Button) R.getChildAt(x);
-						B.setEnabled(true);
+						if(B.getText().equals(""))	
+							B.setEnabled(true);
 					}
 				}
 			}
@@ -467,7 +470,8 @@ public class MainActivity extends BaseActivity{
 				for (int x = 0; x < R.getChildCount(); x++) {
 					if (R.getChildAt(x) instanceof Button) {
 						Button B = (Button) R.getChildAt(x);
-						B.setEnabled(true);
+						if(B.getText().equals(""))	
+							B.setEnabled(true);
 					}
 				}
 			}
@@ -479,7 +483,8 @@ public class MainActivity extends BaseActivity{
 				for (int x = 0; x < R.getChildCount(); x++) {
 					if (R.getChildAt(x) instanceof Button) {
 						Button B = (Button) R.getChildAt(x);
-						B.setEnabled(true);
+						if(B.getText().equals(""))
+							B.setEnabled(true);
 					}
 				}
 			}
@@ -491,7 +496,8 @@ public class MainActivity extends BaseActivity{
 				for (int x = 0; x < R.getChildCount(); x++) {
 					if (R.getChildAt(x) instanceof Button) {
 						Button B = (Button) R.getChildAt(x);
-						B.setEnabled(true);
+						if(B.getText().equals(""))
+							B.setEnabled(true);
 					}
 				}
 			}
@@ -503,7 +509,8 @@ public class MainActivity extends BaseActivity{
 				for (int x = 0; x < R.getChildCount(); x++) {
 					if (R.getChildAt(x) instanceof Button) {
 						Button B = (Button) R.getChildAt(x);
-						B.setEnabled(true);
+						if(B.getText().equals(""))
+							B.setEnabled(true);
 					}
 				}
 			}
@@ -515,7 +522,8 @@ public class MainActivity extends BaseActivity{
 				for (int x = 0; x < R.getChildCount(); x++) {
 					if (R.getChildAt(x) instanceof Button) {
 						Button B = (Button) R.getChildAt(x);
-						B.setEnabled(true);
+						if(B.getText().equals(""))
+							B.setEnabled(true);
 					}
 				}
 			}
@@ -527,7 +535,8 @@ public class MainActivity extends BaseActivity{
 				for (int x = 0; x < R.getChildCount(); x++) {
 					if (R.getChildAt(x) instanceof Button) {
 						Button B = (Button) R.getChildAt(x);
-						B.setEnabled(true);
+						if(B.getText().equals(""))
+							B.setEnabled(true);
 					}
 				}
 			}
@@ -539,7 +548,8 @@ public class MainActivity extends BaseActivity{
 				for (int x = 0; x < R.getChildCount(); x++) {
 					if (R.getChildAt(x) instanceof Button) {
 						Button B = (Button) R.getChildAt(x);
-						B.setEnabled(true);
+						if(B.getText().equals(""))
+							B.setEnabled(true);
 					}
 				}
 			}
@@ -674,7 +684,17 @@ public class MainActivity extends BaseActivity{
 				array_boxes[x][y][z] = noughtsTurn ? 'O' : 'X';
 				if(B.getText().equals(""))
 				{
-					B.setText(noughtsTurn ? "O" : "X");
+					if (noughtsTurn == true) {
+						B.setTextColor(Color.parseColor("#ffce54"));
+						B.setText("O");
+						B.setBackgroundResource(R.drawable.game_button_pressed);
+					}
+					else {
+						B.setTextColor(Color.parseColor("#e74c3c"));
+						B.setText("X");
+						B.setBackgroundResource(R.drawable.game_button_pressed);
+					}
+					//B.setText(noughtsTurn ? "O" : "X");
 				
 				B.setEnabled(false);
 				noughtsTurn = !noughtsTurn;
@@ -751,14 +771,4 @@ public class MainActivity extends BaseActivity{
 		player_not.setWidth((int) (width*0.35));		
 	}
 
-    
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-        case android.R.id.home:
-            mMenuDrawer.toggleMenu();
-        default:
-            return super.onOptionsItemSelected(item);
-        }
-    }
 }
