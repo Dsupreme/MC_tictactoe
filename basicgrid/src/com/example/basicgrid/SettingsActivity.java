@@ -18,11 +18,15 @@ public class SettingsActivity extends ActionBarActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_settings);
-		
+		setContentView(R.layout.activity_settings);		
 		toggle = (ToggleButton) findViewById(R.id.toggle_sound);
+		
+		toggle.setChecked(false);		
+		
 		toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			
 		    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+		    	
 		        if (isChecked) {
 		            // The toggle is enabledToggleButton toggle = (ToggleButton) findViewById(R.id.togglebutton);
 		        	toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -30,9 +34,15 @@ public class SettingsActivity extends ActionBarActivity {
 		        	        if (isChecked) {
 		        	            // The toggle is enabled
 		    					toggle.setBackgroundResource(R.drawable.custom_button_peach_pressed);
+		    					startService(new Intent(getBaseContext(), SoundService.class));
+		    					
+		    					Log.e("on was called","on click");
+
 		        	        } else {
 		        	            // The toggle is disabled
 		    					toggle.setBackgroundResource(R.drawable.custom_button_peach);
+		    					stopService(new Intent(getBaseContext(), SoundService.class));
+		        	        	Log.e("off was called","on click");
 		        	        }
 		        	    }
 		        	});

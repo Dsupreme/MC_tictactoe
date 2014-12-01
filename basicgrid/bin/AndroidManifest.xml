@@ -45,6 +45,7 @@
             android:name=".SettingsActivity"
             android:screenOrientation="portrait">
         </activity>
+        <service android:name=".SoundService" />
     </application>
 
 </manifest>

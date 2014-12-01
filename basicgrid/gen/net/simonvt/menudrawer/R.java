@@ -22,19 +22,19 @@ public final class R {
 		public static final int menuDrawerStyle = 0x7f01006e;
 	}
 	public static final class color {
-		public static final int md__defaultBackground = 0x7f070003;
+		public static final int md__defaultBackground = 0x7f080003;
 	}
 	public static final class id {
-		public static final int mdActiveViewPosition = 0x7f05001f;
-		public static final int mdContent = 0x7f05001a;
-		public static final int mdMenu = 0x7f05001b;
-		public static final int md__content = 0x7f05001c;
-		public static final int md__drawer = 0x7f05001e;
-		public static final int md__menu = 0x7f05001d;
+		public static final int mdActiveViewPosition = 0x7f06001f;
+		public static final int mdContent = 0x7f06001a;
+		public static final int mdMenu = 0x7f06001b;
+		public static final int md__content = 0x7f06001c;
+		public static final int md__drawer = 0x7f06001e;
+		public static final int md__menu = 0x7f06001d;
 	}
 	public static final class style {
-		public static final int Widget = 0x7f0b008b;
-		public static final int Widget_MenuDrawer = 0x7f0b008c;
+		public static final int Widget = 0x7f0c008b;
+		public static final int Widget_MenuDrawer = 0x7f0c008c;
 	}
 	public static final class styleable {
 		public static final int[] MenuDrawer = { 0x7f01006f, 0x7f010070, 0x7f010071, 0x7f010072, 0x7f010073, 0x7f010074, 0x7f010075, 0x7f010076, 0x7f010077, 0x7f010078, 0x7f010079 };
