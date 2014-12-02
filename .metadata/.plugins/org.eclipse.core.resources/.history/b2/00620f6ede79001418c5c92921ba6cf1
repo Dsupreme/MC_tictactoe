@@ -1,0 +1,33 @@
+package com.example.basicgrid;
+import android.graphics.drawable.AnimationDrawable;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class screenview2 extends Fragment {
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
+        ViewGroup rootView = (ViewGroup) inflater.inflate(
+                R.layout.tutorial1, container, false);
+        
+        final ImageView animImageView = (ImageView) rootView.findViewById(R.id.ivAnimation);
+        final TextView tv2 = (TextView)rootView.findViewById(R.id.text_vp);
+        tv2.setText("Player 1 may place an X in any cell within any small squares on the board. The selected cell position within this mini-square corresponds to the mini-square position within the greater-square where the second player must then place an O.");
+        animImageView.setBackgroundResource(R.drawable.anim2);
+        animImageView.post(new Runnable() {
+            @Override
+            public void run() {
+                AnimationDrawable frameAnimation =
+                    (AnimationDrawable) animImageView.getBackground();
+                frameAnimation.start();
+            }
+        });
+        return rootView;
+        }
+}
