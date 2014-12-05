@@ -1,4 +1,5 @@
 package com.example.basicgrid;
+
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -18,7 +19,7 @@ public class screenview1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.tutorial1, container, false);
+                R.layout.tutorial, container, false);
         /*Button b = (Button) rootView.findViewById(R.id.prev);
         b.setVisibility(-1);
         Button b1 = (Button) rootView.findViewById(R.id.next);

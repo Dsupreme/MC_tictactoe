@@ -14,7 +14,7 @@ public class screenview4 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
-                R.layout.tutorial1, container, false);
+                R.layout.tutorial, container, false);
         
         final ImageView animImageView = (ImageView) rootView.findViewById(R.id.ivAnimation);
         animImageView.setBackgroundResource(R.drawable.anim4);

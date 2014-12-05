@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@drawable/custom_button_peach_pressed"
@@ -6,13 +5,4 @@
     <item android:drawable="@drawable/custom_button_peach_pressed"
           android:state_focused="true" />
     <item android:drawable="@drawable/custom_button_peach" />
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/custom_button_peach_pressed"
-          android:state_pressed="true" />
-    <item android:drawable="@drawable/custom_button_peach_pressed"
-          android:state_focused="true" />
-    <item android:drawable="@drawable/custom_button_peach" />
->>>>>>> 2c2ac7c8b7a37bd871a62ebdbf8bd5827d900de1
 </selector>

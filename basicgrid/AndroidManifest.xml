@@ -30,11 +30,7 @@
         </activity>
         <activity
             android:name=".ScreenSlideActivity"
-<<<<<<< HEAD
-            android:label="@string/title_activity_tutorial" >
-=======
             android:label="@string/title_activity_tutorial">
->>>>>>> 2c2ac7c8b7a37bd871a62ebdbf8bd5827d900de1
         </activity>
         <activity
             android:name=".DisplayMessageActivity"
@@ -43,29 +39,17 @@
         </activity>
         <activity
             android:name=".Main_menu"
-<<<<<<< HEAD
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
         </activity>
-
-        <service android:name=".SoundService" />
-
-        <activity
+        <activity 
             android:name=".GameModeActivity"
-            android:label="@string/title_activity_game_mode" >
-        </activity>
-=======
-            android:screenOrientation="portrait">
-        </activity>
-        <activity
-            android:name=".SettingsActivity"
             android:screenOrientation="portrait">
         </activity>
         <service android:name=".SoundService" />
->>>>>>> 2c2ac7c8b7a37bd871a62ebdbf8bd5827d900de1
     </application>
 
 </manifest>

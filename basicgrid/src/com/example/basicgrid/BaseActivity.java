@@ -8,6 +8,7 @@ import net.simonvt.menudrawer.MenuDrawer;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -108,6 +109,11 @@ public class BaseActivity extends Activity {
 			Toast.makeText(this, "Four", Toast.LENGTH_SHORT).show();
 			break;
 		}
+	}
+
+	public boolean onTouch(View v, MotionEvent event) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 }

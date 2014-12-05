@@ -23,11 +23,7 @@ public class Main_menu extends Activity {
 		newgame.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-<<<<<<< HEAD
             	Intent gotomain = new Intent(Main_menu.this, GameModeActivity.class);
-=======
-            	Intent gotomain = new Intent(Main_menu.this, MainActivity.class);
->>>>>>> 2c2ac7c8b7a37bd871a62ebdbf8bd5827d900de1
             	startActivity(gotomain);
             }
         });

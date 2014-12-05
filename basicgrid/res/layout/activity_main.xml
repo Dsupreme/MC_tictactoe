@@ -10,15 +10,11 @@
     android:paddingTop="5dp"
     tools:context="com.example.basicgrid.MainActivity" >
 
-<<<<<<< HEAD
- 
-=======
     <TextView
         android:id="@+id/winner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Player1" />
->>>>>>> 2c2ac7c8b7a37bd871a62ebdbf8bd5827d900de1
 
     <LinearLayout
         android:id="@+id/row_1"
@@ -910,14 +906,10 @@
         <!-- BOX 9 ENDS HERE -->
     </LinearLayout>
 
-<<<<<<< HEAD
-   
-=======
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Player2" />
->>>>>>> 2c2ac7c8b7a37bd871a62ebdbf8bd5827d900de1
 
     <LinearLayout
         android:id="@+id/blank_space"
@@ -957,15 +949,12 @@
 		</RelativeLayout>
         
 
-<<<<<<< HEAD
-
-=======
         <TextView
             android:id="@+id/tv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#FFF"
             android:text="TextView" />
->>>>>>> 2c2ac7c8b7a37bd871a62ebdbf8bd5827d900de1
 
     </LinearLayout>
 
